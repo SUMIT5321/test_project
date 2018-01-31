@@ -1,230 +1,459 @@
-vinsols-MacBook-Pro:AssignRedo vinsol$ mkdir project1
-vinsols-MacBook-Pro:AssignRedo vinsol$ mkdir project2
-vinsols-MacBook-Pro:AssignRedo vinsol$ cd project1
-vinsols-MacBook-Pro:project1 vinsol$ git init
+ mkdir project1
+
+ mkdir project2
+
+ cd project1
+
+ git init
+
 Initialized empty Git repository in /Users/vinsol/Documents/GIT ASSIGNMENTS/AssignRedo/project1/.git/
-vinsols-MacBook-Pro:project1 vinsol$ git checkout staging
+
+ git checkout staging
+
 error: pathspec 'staging' did not match any file(s) known to git.
-vinsols-MacBook-Pro:project1 vinsol$ git checkout -b staging
+
+ git checkout -b staging
+
 Switched to a new branch 'staging'
-vinsols-MacBook-Pro:project1 vinsol$ touch test1
-vinsols-MacBook-Pro:project1 vinsol$ open -e test1
-vinsols-MacBook-Pro:project1 vinsol$ git add test1
-vinsols-MacBook-Pro:project1 vinsol$ git status
+
+ touch test1
+
+ open -e test1
+
+ git add test1
+
+ git status
+
 On branch staging
+
+
 
 No commits yet
 
+
+
 Changes to be committed:
+
   (use "git rm --cached <file>..." to unstage)
+
+
 
 	new file:   test1
 
-vinsols-MacBook-Pro:project1 vinsol$ git commit -m "added new file test1
+
+
+ git commit -m "added new file test1
+
 > with content - This is first commit"
+
 [staging (root-commit) 5f123c3] added new file test1 with content - This is first commit
+
  1 file changed, 1 insertion(+)
+
  create mode 100644 test1
-vinsols-MacBook-Pro:project1 vinsol$ git remote add origin https://github.com/SUMIT5321/test_project.git
-vinsols-MacBook-Pro:project1 vinsol$ git push origin staging
+
+ git remote add origin https://github.com/SUMIT5321/test_project.git
+
+ git push origin staging
+
 Counting objects: 3, done.
+
 Writing objects: 100% (3/3), 255 bytes | 255.00 KiB/s, done.
+
 Total 3 (delta 0), reused 0 (delta 0)
+
 To https://github.com/SUMIT5321/test_project.git
+
  * [new branch]      staging -> staging
-vinsols-MacBook-Pro:project1 vinsol$ cd ../project2
-vinsols-MacBook-Pro:project2 vinsol$ git clone https://github.com/SUMIT5321/test_project.git
+
+ cd ../project2
+
+ git clone https://github.com/SUMIT5321/test_project.git
+
 Cloning into 'test_project'...
+
 remote: Counting objects: 3, done.
+
 remote: Total 3 (delta 0), reused 3 (delta 0), pack-reused 0
+
 Unpacking objects: 100% (3/3), done.
-vinsols-MacBook-Pro:project2 vinsol$ git checkout staging
+
+ git checkout staging
+
 fatal: Not a git repository (or any of the parent directories): .git
-vinsols-MacBook-Pro:project2 vinsol$ cd test_project/
-vinsols-MacBook-Pro:test_project vinsol$ git checkout staging
+
+ cd test_project/
+
+ git checkout staging
+
 Already on 'staging'
+
 Your branch is up-to-date with 'origin/staging'.
-vinsols-MacBook-Pro:test_project vinsol$ open -e test1
-vinsols-MacBook-Pro:test_project vinsol$ git add test1
-vinsols-MacBook-Pro:test_project vinsol$ git commit -m "change first commit to second commit in file test1"
+
+ open -e test1
+
+ git add test1
+
+ git commit -m "change first commit to second commit in file test1"
+
 [staging 6025447] change first commit to second commit in file test1
+
  1 file changed, 1 insertion(+), 1 deletion(-)
-vinsols-MacBook-Pro:test_project vinsol$ git push origin staging
+
+ git push origin staging
+
 Counting objects: 3, done.
+
 Writing objects: 100% (3/3), 278 bytes | 278.00 KiB/s, done.
+
 Total 3 (delta 0), reused 0 (delta 0)
+
 To https://github.com/SUMIT5321/test_project.git
+
    5f123c3..6025447  staging -> staging
-vinsols-MacBook-Pro:test_project vinsol$ cd ../../project1
-vinsols-MacBook-Pro:project1 vinsol$ git checkout staging
+
+ cd ../../project1
+
+ git checkout staging
+
 Already on 'staging'
-vinsols-MacBook-Pro:project1 vinsol$ open -e test1
-vinsols-MacBook-Pro:project1 vinsol$ git add .
-vinsols-MacBook-Pro:project1 vinsol$ git commit -m "change first commit to third commit in file test1"
+
+ open -e test1
+
+ git add .
+
+ git commit -m "change first commit to third commit in file test1"
+
 [staging b44b9e6] change first commit to third commit in file test1
+
  1 file changed, 1 insertion(+), 1 deletion(-)
-vinsols-MacBook-Pro:project1 vinsol$ git push origin staging
+
+ git push origin staging
+
 To https://github.com/SUMIT5321/test_project.git
+
  ! [rejected]        staging -> staging (fetch first)
+
 error: failed to push some refs to 'https://github.com/SUMIT5321/test_project.git'
+
 hint: Updates were rejected because the remote contains work that you do
+
 hint: not have locally. This is usually caused by another repository pushing
+
 hint: to the same ref. You may want to first integrate the remote changes
+
 hint: (e.g., 'git pull ...') before pushing again.
+
 hint: See the 'Note about fast-forwards' in 'git push --help' for details.
-vinsols-MacBook-Pro:project1 vinsol$ git checkout -b master
+
+ git checkout -b master
+
 Switched to a new branch 'master'
-vinsols-MacBook-Pro:project1 vinsol$ git merge staging
+
+ git merge staging
+
 Already up-to-date.
-vinsols-MacBook-Pro:project1 vinsol$ git checkout -b testing
+
+ git checkout -b testing
+
 Switched to a new branch 'testing'
-vinsols-MacBook-Pro:project1 vinsol$ open -e test1
-vinsols-MacBook-Pro:project1 vinsol$ git add .
-vinsols-MacBook-Pro:project1 vinsol$ git commit -m "Update file test1 with content - A is an alphabet"
+
+ open -e test1
+
+ git add .
+
+ git commit -m "Update file test1 with content - A is an alphabet"
+
 [testing 4289367] Update file test1 with content - A is an alphabet
+
  1 file changed, 1 insertion(+), 1 deletion(-)
-vinsols-MacBook-Pro:project1 vinsol$ git push origin testing
+
+ git push origin testing
+
 Counting objects: 9, done.
+
 Delta compression using up to 8 threads.
+
 Compressing objects: 100% (3/3), done.
+
 Writing objects: 100% (9/9), 747 bytes | 747.00 KiB/s, done.
+
 Total 9 (delta 0), reused 0 (delta 0)
+
 To https://github.com/SUMIT5321/test_project.git
+
  * [new branch]      testing -> testing
-vinsols-MacBook-Pro:project1 vinsol$ open -e test1
-vinsols-MacBook-Pro:project1 vinsol$ git add .
-vinsols-MacBook-Pro:project1 vinsol$ git commit -m "Replace A with B in file test1"
+
+ open -e test1
+
+ git add .
+
+ git commit -m "Replace A with B in file test1"
+
 [testing ebc948e] Replace A with B in file test1
+
  1 file changed, 1 insertion(+), 1 deletion(-)
-vinsols-MacBook-Pro:project1 vinsol$ open -e test1
-vinsols-MacBook-Pro:project1 vinsol$ git add .
-vinsols-MacBook-Pro:project1 vinsol$ git commit -m "Replace B with C in file test1"
+
+ open -e test1
+
+ git add .
+
+ git commit -m "Replace B with C in file test1"
+
 [testing 955a451] Replace B with C in file test1
+
  1 file changed, 1 insertion(+), 1 deletion(-)
-vinsols-MacBook-Pro:project1 vinsol$ open -e test1
-vinsols-MacBook-Pro:project1 vinsol$ git add .
-vinsols-MacBook-Pro:project1 vinsol$ git commit -m "Replace C with D in file test1"
+
+ open -e test1
+
+ git add .
+
+ git commit -m "Replace C with D in file test1"
+
 [testing e1e9ef3] Replace C with D in file test1
+
  1 file changed, 1 insertion(+), 1 deletion(-)
-vinsols-MacBook-Pro:project1 vinsol$ open -e test1
-vinsols-MacBook-Pro:project1 vinsol$ git add .
-vinsols-MacBook-Pro:project1 vinsol$ git commit -m "Replace D with E in file test1"
+
+ open -e test1
+
+ git add .
+
+ git commit -m "Replace D with E in file test1"
+
 [testing 76177d1] Replace D with E in file test1
+
  1 file changed, 1 insertion(+), 1 deletion(-)
-vinsols-MacBook-Pro:project1 vinsol$ open -e test1
-vinsols-MacBook-Pro:project1 vinsol$ git add .
-vinsols-MacBook-Pro:project1 vinsol$ git commit -m "Replace E with F in file test1"
+
+ open -e test1
+
+ git add .
+
+ git commit -m "Replace E with F in file test1"
+
 [testing 5d5544b] Replace E with F in file test1
+
  1 file changed, 1 insertion(+), 1 deletion(-)
-vinsols-MacBook-Pro:project1 vinsol$ git add .
-vinsols-MacBook-Pro:project1 vinsol$ open -e test1
-vinsols-MacBook-Pro:project1 vinsol$ git add .
-vinsols-MacBook-Pro:project1 vinsol$ git commit -m "Replace F with G in file test1"
+
+ git add .
+
+ open -e test1
+
+ git add .
+
+ git commit -m "Replace F with G in file test1"
+
 [testing 508a2c3] Replace F with G in file test1
+
  1 file changed, 1 insertion(+), 1 deletion(-)
-vinsols-MacBook-Pro:project1 vinsol$ open -e test1
-vinsols-MacBook-Pro:project1 vinsol$ git add .
-vinsols-MacBook-Pro:project1 vinsol$ git commit -m "Replace G with H in file test1"
+
+ open -e test1
+
+ git add .
+
+ git commit -m "Replace G with H in file test1"
+
 [testing 33bac1a] Replace G with H in file test1
+
  1 file changed, 1 insertion(+), 1 deletion(-)
-vinsols-MacBook-Pro:project1 vinsol$ git push origin testing
+
+ git push origin testing
+
 Counting objects: 21, done.
+
 Delta compression using up to 8 threads.
+
 Compressing objects: 100% (7/7), done.
+
 Writing objects: 100% (21/21), 1.64 KiB | 838.00 KiB/s, done.
+
 Total 21 (delta 0), reused 0 (delta 0)
+
 To https://github.com/SUMIT5321/test_project.git
+
    4289367..33bac1a  testing -> testing
-vinsols-MacBook-Pro:project1 vinsol$ git checkout master
+
+ git checkout master
+
 Switched to branch 'master'
-vinsols-MacBook-Pro:project1 vinsol$ open -e test1
-vinsols-MacBook-Pro:project1 vinsol$ git add .
-vinsols-MacBook-Pro:project1 vinsol$ git commit -m "update file test1 content to - 1 is a number"
+
+ open -e test1
+
+ git add .
+
+ git commit -m "update file test1 content to - 1 is a number"
+
 [master feaaa90] update file test1 content to - 1 is a number
+
  1 file changed, 1 insertion(+), 1 deletion(-)
-vinsols-MacBook-Pro:project1 vinsol$ open -e test1
-vinsols-MacBook-Pro:project1 vinsol$ git add .
-vinsols-MacBook-Pro:project1 vinsol$ git commit -m "Replace 1 with 2 in file test1"
+
+ open -e test1
+
+ git add .
+
+ git commit -m "Replace 1 with 2 in file test1"
+
 [master 9db99b8] Replace 1 with 2 in file test1
+
  1 file changed, 1 insertion(+), 1 deletion(-)
-vinsols-MacBook-Pro:project1 vinsol$ open -e test1
-vinsols-MacBook-Pro:project1 vinsol$ git add .
-vinsols-MacBook-Pro:project1 vinsol$ git commit -m "Replace 2 with 3 in file test1"
+
+ open -e test1
+
+ git add .
+
+ git commit -m "Replace 2 with 3 in file test1"
+
 [master 29ed238] Replace 2 with 3 in file test1
+
  1 file changed, 1 insertion(+), 1 deletion(-)
-vinsols-MacBook-Pro:project1 vinsol$ open -e test1
-vinsols-MacBook-Pro:project1 vinsol$ git add .
-vinsols-MacBook-Pro:project1 vinsol$ git commit -m "Replace 3 with 4 in file test1"
+
+ open -e test1
+
+ git add .
+
+ git commit -m "Replace 3 with 4 in file test1"
+
 [master 3c3973c] Replace 3 with 4 in file test1
+
  1 file changed, 1 insertion(+), 1 deletion(-)
-vinsols-MacBook-Pro:project1 vinsol$ open -e test1
-vinsols-MacBook-Pro:project1 vinsol$ git add .
-vinsols-MacBook-Pro:project1 vinsol$ git commit -m "Replace 4 with 5 in file test1"
+
+ open -e test1
+
+ git add .
+
+ git commit -m "Replace 4 with 5 in file test1"
+
 [master 6f159d7] Replace 4 with 5 in file test1
+
  1 file changed, 1 insertion(+), 1 deletion(-)
-vinsols-MacBook-Pro:project1 vinsol$ open -e test1
-vinsols-MacBook-Pro:project1 vinsol$ git add .
-vinsols-MacBook-Pro:project1 vinsol$ git commit -m "Replace 5 with 6 in file test1"
+
+ open -e test1
+
+ git add .
+
+ git commit -m "Replace 5 with 6 in file test1"
+
 [master bab42c9] Replace 5 with 6 in file test1
+
  1 file changed, 1 insertion(+), 1 deletion(-)
-vinsols-MacBook-Pro:project1 vinsol$ open -e test1
-vinsols-MacBook-Pro:project1 vinsol$ git add .
-vinsols-MacBook-Pro:project1 vinsol$ git commit -m "Replace 6 with 7 in file test1"
+
+ open -e test1
+
+ git add .
+
+ git commit -m "Replace 6 with 7 in file test1"
+
 [master a4ab6a9] Replace 6 with 7 in file test1
+
  1 file changed, 1 insertion(+), 1 deletion(-)
-vinsols-MacBook-Pro:project1 vinsol$ open -e test1
-vinsols-MacBook-Pro:project1 vinsol$ git commit -am "Replace 7 with 8 in file test1"
+
+ open -e test1
+
+ git commit -am "Replace 7 with 8 in file test1"
+
 [master a220959] Replace 7 with 8 in file test1
+
  1 file changed, 1 insertion(+), 1 deletion(-)
-vinsols-MacBook-Pro:project1 vinsol$ git push origin master
+
+ git push origin master
+
 Counting objects: 24, done.
+
 Delta compression using up to 8 threads.
+
 Compressing objects: 100% (8/8), done.
+
 Writing objects: 100% (24/24), 1.83 KiB | 625.00 KiB/s, done.
+
 Total 24 (delta 0), reused 0 (delta 0)
+
 To https://github.com/SUMIT5321/test_project.git
+
  * [new branch]      master -> master
-vinsols-MacBook-Pro:project1 vinsol$ git branch
+
+ git branch
+
 * master
+
   staging
+
   testing
-vinsols-MacBook-Pro:project1 vinsol$ git rebase testing
+
+ git rebase testing
+
 First, rewinding head to replay your work on top of it...
+
 Applying: update file test1 content to - 1 is a number
+
 Using index info to reconstruct a base tree...
+
 M	test1
+
 Falling back to patching base and 3-way merge...
+
 Auto-merging test1
+
 CONFLICT (content): Merge conflict in test1
+
 error: Failed to merge in the changes.
+
 Patch failed at 0001 update file test1 content to - 1 is a number
+
 The copy of the patch that failed is found in: .git/rebase-apply/patch
 
+
+
 When you have resolved this problem, run "git rebase --continue".
+
 If you prefer to skip this patch, run "git rebase --skip" instead.
+
 To check out the original branch and stop rebasing, run "git rebase --abort".
 
-vinsols-MacBook-Pro:project1 vinsol$ cd ../project2/test_project/
-vinsols-MacBook-Pro:test_project vinsol$ git fetch origin
+
+
+ cd ../project2/test_project/
+
+ git fetch origin
+
 remote: Counting objects: 51, done.
+
 remote: Compressing objects: 100% (17/17), done.
+
 remote: Total 51 (delta 0), reused 51 (delta 0), pack-reused 0
+
 Unpacking objects: 100% (51/51), done.
+
 From https://github.com/SUMIT5321/test_project
+
  * [new branch]      master     -> origin/master
+
  * [new branch]      testing    -> origin/testing
-vinsols-MacBook-Pro:test_project vinsol$ git checkout --track origin/testing
+
+ git checkout --track origin/testing
+
 Branch testing set up to track remote branch testing from origin.
+
 Switched to a new branch 'testing'
-vinsols-MacBook-Pro:test_project vinsol$ git checkout master
+
+ git checkout master
+
 Branch master set up to track remote branch master from origin.
+
 Switched to a new branch 'master'
-vinsols-MacBook-Pro:test_project vinsol$ git merge testing
+
+ git merge testing
+
 Auto-merging test1
+
 CONFLICT (content): Merge conflict in test1
+
 Automatic merge failed; fix conflicts and then commit the result.
-vinsols-MacBook-Pro:test_project vinsol$ open -e test1
-vinsols-MacBook-Pro:test_project vinsol$ git add .
-vinsols-MacBook-Pro:test_project vinsol$ git commit -m "resolve merge conflict-move the lines from testing and master to single line separated by and"
+
+ open -e test1
+
+ git add .
+
+ git commit -m "resolve merge conflict-move the lines from testing and master to single line separated by and"
+
 [master 6082446] resolve merge conflict-move the lines from testing and master to single line separated by and
-vinsols-MacBook-Pro:test_project vinsol$ 
+
+ 
